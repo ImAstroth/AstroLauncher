@@ -12,7 +12,8 @@
                         Content="Hi!"
                         HorizontalAlignment="Center"
                         HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+                        Background="Coral"/>
         </Grid>                
         
 </Window>
