@@ -25,6 +25,10 @@
         <None Remove="Assets\Images\settings.png" />
 
         <AvaloniaResource Include="Assets\Images\settings.png" />
+
+        <None Remove="Assets\Images\logo.png" />
+
+        <AvaloniaResource Include="Assets\Images\logo.png" />
     </ItemGroup>
 
     <ItemGroup>
@@ -34,7 +38,6 @@
 
     <ItemGroup>
       <None Remove="Assets\backgound.png" />
-      <AvaloniaResource Include="Assets\background.png" />
       <None Remove="Assets\Fonts\Minecraft.ttf" />
       <AvaloniaResource Include="Assets\Fonts\Minecraft.ttf" />
     </ItemGroup>

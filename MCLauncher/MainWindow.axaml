@@ -2,54 +2,73 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="750" d:DesignHeight="500"
         
-        TransparencyLevelHint="AcrylicBlur"
-        Background="Transparent"
+        
+        WindowStartupLocation="CenterScreen"
+        ExtendClientAreaTitleBarHeightHint="-1"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="NoChrome"
+        SystemDecorations="None"
+        
+        Background="#0A0E14"
+        Width="750" Height="500"
+        CanResize="False"
         
         x:Class="MCLauncher.MainWindow"
         Title="Astro Launcher">
-    
-        <Grid>
-                <Image Source="/Assets/background.png" 
-                       Stretch="UniformToFill" />
-
-                <Rectangle Fill="Black" Opacity="0.5" />
-                
-                <Border Background="#80000000"
-                        VerticalAlignment="Bottom"
-                        Height="80"
-                        CornerRadius="15,15,15,15"
-                        Margin="20,0,20,15">
-
-                        <Grid ColumnDefinitions="*, Auto, *">
-                                <Button Grid.Column="1" 
-                                        Classes="BottomBtn" 
-                                        FontSize="35"
-                                        Padding="10"
-                                        FontFamily="{StaticResource MinecraftFont}"
-                                        Click="OnLaunchButtonClicked"
-                                        Content="PLAY"
-                                        VerticalAlignment="Center"/>
-                                
-                                <Button Grid.Column="0"
-                                        Background="#2c3e50"
-                                        Width="65"
-                                        Height="65"
-                                        VerticalAlignment="Center"
-                                        HorizontalAlignment="Center"
-                                        HorizontalContentAlignment="Center"
-                                        VerticalContentAlignment="Center"
-                                        CornerRadius="15">
-
-                                        <Image Source="/Assets/Images/settings.png" 
-                                               Width="50" Height="50"
-                                               HorizontalAlignment="Center"
-                                               VerticalAlignment="Center"/>
-                                </Button>
-                        </Grid>
-                        
-                </Border>
-        </Grid>                
         
+        <Border BorderBrush="#8C66FF"
+                BorderThickness="1">
+                
+                <Grid>
+                        <Rectangle Fill="#0A0E14" Opacity="0.5" />
+                        
+                        <StackPanel VerticalAlignment="Top"
+                                    Width="745" Height="30"
+                                    Margin="5"
+                                    Name="TopBar"
+                                    Background="#05070a"
+                                    PointerPressed="SetupDrag">
+                                
+                                <StackPanel Name="ControlButtons"
+                                            Orientation="Horizontal"
+                                            HorizontalAlignment="Right">
+                                        
+                                        <!-- Minimize button -->
+                                        <Button Content="-"
+                                                Classes="Minimize ControlBtn"
+                                                Click="MinimizeButton_Click"/>
+                                        
+                                        <!-- Close button -->
+                                        <Button Content="✕"
+                                                Classes="Close ControlBtn"
+                                                Click="CloseButton_Click"/>
+                                </StackPanel>
+                        </StackPanel>
+                
+                        <Image Source="Assets/Images/logo.png"
+                               Width="250" Height="250"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Top"
+                               Margin="40"/>
+                
+                        <Border Background="#151924"
+                                VerticalAlignment="Bottom"
+                                HorizontalAlignment="Center"
+                                Height="250" Width="400"
+                                Margin="50"
+                                CornerRadius="15"
+                                BorderBrush="#252733"
+                                BorderThickness="1.5">
+        
+                                <StackPanel Margin="10">
+                                        <Label Content="USERNAME" Foreground="White" FontWeight="SemiBold"
+                                               HorizontalAlignment="Left" Margin="0,0,0,5"/>
+                                        
+                                        <TextBox Classes="TextBoxStyle"/>
+                                </StackPanel>
+                        </Border>
+                </Grid>
+        </Border>                
 </Window>

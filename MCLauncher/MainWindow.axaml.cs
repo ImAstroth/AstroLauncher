@@ -2,6 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Avalonia.Controls;
+using Avalonia.Input;
 using Avalonia.Interactivity;
 using CmlLib.Core;
 using CmlLib.Core.Auth;
@@ -16,6 +17,17 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        ExtendClientAreaToDecorationsHint = true;
+    }
+    
+    private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+    {
+        WindowState = WindowState.Minimized;
+    }
+
+    private void CloseButton_Click(object sender, RoutedEventArgs e)
+    {
+        Close();
     }
     
     public async void OnLaunchButtonClicked(object sender, RoutedEventArgs e)
@@ -47,5 +59,10 @@ public partial class MainWindow : Window
         {
             DebugUtil.Error($"[CmlLib Error]: {ex.Message}");
         }
+    }
+
+    private void SetupDrag(object? sender, PointerPressedEventArgs e)
+    {
+        BeginMoveDrag(e);
     }
 }
