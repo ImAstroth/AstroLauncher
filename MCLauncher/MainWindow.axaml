@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="750" d:DesignHeight="500"
+        mc:Ignorable="d" d:DesignWidth="750" d:DesignHeight="600"
         
         WindowStartupLocation="CenterScreen"
         ExtendClientAreaTitleBarHeightHint="-1"
@@ -11,7 +11,7 @@
         SystemDecorations="None"
         
         Background="#0A0E14"
-        Width="750" Height="500"
+        Width="750" Height="600"
         CanResize="False"
         
         x:Class="MCLauncher.MainWindow"
@@ -55,7 +55,7 @@
                         <Border Background="#151924"
                                 VerticalAlignment="Bottom"
                                 HorizontalAlignment="Center"
-                                Height="250" Width="400"
+                                Height="350" Width="400"
                                 Margin="50"
                                 CornerRadius="15"
                                 BorderBrush="#252733"
@@ -69,11 +69,33 @@
                                         <ComboBox Classes="DefaultComboBox" Width="375" Name="VersionsMenu"
                                                         PlaceholderForeground="Gray"
                                                         PlaceholderText="Select version..."/>
+                                                
+                                        <Border CornerRadius="8">
+                                                
+                                                <StackPanel Background="#1A1E29"
+                                                            Width="375" Height="30"
+                                                            Margin="0, 10,0,0">
+
+                                                        <ProgressBar x:Name="LaunchProgress"
+                                                                     Height="30" Width="375"
+                                                                     Minimum="0" CornerRadius="8"
+                                                                     Maximum="100"
+                                                                     Value="0"
+                                                                     FontWeight="SemiBold"
+                                                                     Foreground="White"
+                                                                     Background="#1A1D29"
+                                                                     ShowProgressText="True"/>
+                                                </StackPanel>
+                                        </Border>
                                         
-                                        <Button Width="200" Height="50" HorizontalAlignment="Center" Margin="20"
-                                                CornerRadius="12" Name="LaunchButton" Content="PLAY"
+                                        <Button Width="375" Height="50" 
+                                                HorizontalAlignment="Center"
+                                                Margin="0, 10, 0, 0"
+                                                CornerRadius="12" Name="LaunchButton" 
+                                                Content="LAUNCH"
                                                 VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                                                Foreground="White" FontFamily="Minecraft" FontSize="30"
+                                                Foreground="White" Background="#8C66FF"
+                                                FontWeight="SemiBold" FontSize="30"
                                                 Click="OnLaunchButtonClicked"/>
                                 </StackPanel>
                         </Border>

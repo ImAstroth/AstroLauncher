@@ -6,6 +6,8 @@
         <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
         <ApplicationManifest>app.manifest</ApplicationManifest>
         <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+
+        <AssemblyName>Astro Launcher</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
@@ -24,15 +26,15 @@
 
         <None Remove="Assets\Images\settings.png" />
 
+        <AvaloniaResource Include="Assets\Images\logo.png" />
+
         <AvaloniaResource Include="Assets\Images\settings.png" />
 
         <None Remove="Assets\Images\logo.png" />
-
-        <AvaloniaResource Include="Assets\Images\logo.png" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Assets\Images\" />
+      <Folder Include="\Assets\Images" />
       <Folder Include="\Assets\Fonts\*"/>
     </ItemGroup>
 
