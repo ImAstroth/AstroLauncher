@@ -60,6 +60,7 @@ public partial class MainWindow : Window
             
             // update drop down
             VersionsMenu.ItemsSource = releasesOnly;
+            Debug.WriteLine("");
         
             // set a default so it is not empty
             VersionsMenu.SelectedIndex = 0;
