@@ -2,6 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MCLauncher"
         mc:Ignorable="d" d:DesignWidth="750" d:DesignHeight="600"
         
         WindowStartupLocation="CenterScreen"
@@ -62,13 +63,16 @@
                                 BorderThickness="1.5">
         
                                 <StackPanel Margin="10">
-                                        <Label Content="USERNAME" Classes="DefaultLabel" Margin="0,0,0,5"/>
+                                        <Label Content="ACCOUNT" Classes="DefaultLabel" Margin="0,0,0,5"/>
                                         <TextBox Classes="TextBoxStyle" Name="UsernameBox"/>
                                         
                                         <Label Classes="DefaultLabel" Content="MINECRAFT VERSION" Margin="0,5,0,5"/>
                                         <ComboBox Classes="DefaultComboBox" Width="375" Name="VersionsMenu"
                                                         PlaceholderForeground="Gray"
-                                                        PlaceholderText="Select version..."/>
+                                                        PlaceholderText="Select version..." />
+                                        <Button Height="30" Classes="AccountBtn" HorizontalAlignment="Center" Margin="5"
+                                                Content="LOGIN" FontWeight="SemiBold" FontSize="15" VerticalContentAlignment="Center"
+                                                HorizontalContentAlignment="Center" Click="OnLoginClicked"/>
                                                 
                                         <Border CornerRadius="8">
                                                 

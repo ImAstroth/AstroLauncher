@@ -15,10 +15,19 @@ namespace MCLauncher;
 
 public partial class MainWindow : Window
 {
+    private readonly System.Threading.SemaphoreSlim _loadLock = new(1, 1);
+    
     public MainWindow()
     {
         InitializeComponent();
         ExtendClientAreaToDecorationsHint = true;
+        
+        // load on start
+        var savedAccount = AccountManager.Load();
+        if (savedAccount != null)
+        {
+            UsernameBox.Text = savedAccount.Username;
+        }
     }
     
     private void MinimizeButton_Click(object sender, RoutedEventArgs e)
@@ -42,33 +51,54 @@ public partial class MainWindow : Window
         await LoadVersionsAsync();
     }
 
+    public void OnLoginClicked(object sender, RoutedEventArgs e)
+    {
+        var input = UsernameBox.Text;
+
+        if (string.IsNullOrWhiteSpace(input))
+        {
+            // dont save garbage.
+            return;
+        }
+
+        var account = new LauncherAccount 
+        { 
+            Username = input,
+            IsMicrosoft = false
+        };
+
+        AccountManager.Save(account);
+        
+        Debug.WriteLine($"Saved: {account.DisplayName}");
+    }
+    
     private async Task LoadVersionsAsync()
     {
-        var path = MinecraftPath.GetOSDefaultPath();
-        var launcher = new MinecraftLauncher(path);
-        
-        // fetch versions
+        await _loadLock.WaitAsync();
+
         try
         {
+            var path = MinecraftPath.GetOSDefaultPath();
+            var launcher = new MinecraftLauncher(path);
+
             var allVersions = await launcher.GetAllVersionsAsync();
-            
-            // filter versions only for releases (v is version btw)
+        
             var releasesOnly = allVersions
                 .Where(v => v.Type == "release")
                 .Select(v => v.Name)
                 .ToList();
-            
-            // update drop down
-            VersionsMenu.ItemsSource = releasesOnly;
-            Debug.WriteLine("");
         
-            // set a default so it is not empty
+            VersionsMenu.ItemsSource = releasesOnly;
             VersionsMenu.SelectedIndex = 0;
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
-            throw;
+            Debug.WriteLine($"[Load Error]: {e.Message}");
+        }
+        finally
+        {
+            // ALWAYS release the lock
+            _loadLock.Release();
         }
     }
 
@@ -77,7 +107,7 @@ public partial class MainWindow : Window
         try 
         {
             string? selectedVersion = VersionsMenu.SelectedItem as string;
-            string username = UsernameBox.Text ?? "Player";
+            string username = "Player";
 
             if (string.IsNullOrEmpty(selectedVersion))
             {
