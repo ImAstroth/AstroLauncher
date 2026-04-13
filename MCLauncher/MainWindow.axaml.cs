@@ -5,6 +5,7 @@ using Avalonia.Input;
 using Avalonia.Interactivity;
 
 using MCLauncher.Utils.MinecraftControls;
+using MCLauncher.Launcher;
 
 namespace MCLauncher;
 
@@ -12,7 +13,7 @@ public partial class MainWindow : Window
 {
     private readonly System.Threading.SemaphoreSlim _loadLock = new(1, 1);
     
-    public MinecraftActions MinecraftActions = new MinecraftActions();
+    private readonly MinecraftActions _minecraftActions = new MinecraftActions();
     
     public MainWindow()
     {
@@ -42,15 +43,22 @@ public partial class MainWindow : Window
         Managers.FolderBtnManager.OpenMinecraftFolder();
     }
     
+    public void OnSettingsButtonClicked(object sender, RoutedEventArgs e)
+    {
+        var settingsWin = new SettingsWindow();
+        // 'this' makes the main window the owner, keeping things centered and modal
+        settingsWin.ShowDialog(this);
+    }
+    
     public async void OnLaunchButtonClicked(object sender, RoutedEventArgs e)
     {
-        await MinecraftActions.LaunchMinecraftAsync(VersionsMenu, UsernameBox);
+        await _minecraftActions.LaunchMinecraftAsync(VersionsMenu, UsernameBox);
     }
     
     protected override async void OnOpened(EventArgs e)
     {
         base.OnOpened(e);
-        await MinecraftActions.LoadVersionsAsync(VersionsMenu);
+        await _minecraftActions.LoadVersionsAsync(VersionsMenu);
     }
 
     public void OnLoginClicked(object sender, RoutedEventArgs e)
@@ -73,7 +81,6 @@ public partial class MainWindow : Window
         
         Debug.WriteLine($"Saved: {account.DisplayName}");
     }
-    
 
     private void SetupDrag(object? sender, PointerPressedEventArgs e)
     {

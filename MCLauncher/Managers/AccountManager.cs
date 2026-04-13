@@ -2,6 +2,8 @@ using System;
 using System.IO;
 using System.Text.Json;
 
+using MCLauncher.Launcher;
+
 namespace MCLauncher.Managers;
 
 public static class AccountManager
