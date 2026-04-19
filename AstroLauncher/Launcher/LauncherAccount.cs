@@ -2,7 +2,7 @@ namespace AstroLauncher.Launcher;
 
 public class LauncherAccount
 {
-    public string Username { get; set; }
+    public required string Username { get; set; }
     public bool IsMicrosoft { get; set; }
     public string? RefreshToken { get; set; } // ONLY IF MICROSOFT ACCOUNT
     

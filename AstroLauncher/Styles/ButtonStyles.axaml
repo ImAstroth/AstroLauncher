@@ -49,7 +49,9 @@
         <Setter Property="Height" Value="75"/>
         <Setter Property="Margin" Value="0,20,0,0"/>
         <Setter Property="CornerRadius" Value="0,10,10,0"/>
-        <Setter Property="Background" Value="{DynamicResource AccentColor}"/>
+        <Setter Property="Background" Value="{DynamicResource SurfaceSecondary}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource AccentColor}"/>
+        <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
     </Style>

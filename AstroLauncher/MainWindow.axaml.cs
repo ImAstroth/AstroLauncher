@@ -5,6 +5,7 @@ using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Interactivity;
 using AstroLauncher.Launcher;
+using AstroLauncher.ViewModels;
 
 namespace AstroLauncher;
 
@@ -19,16 +20,6 @@ public partial class MainWindow : Window
         InitializeComponent();
         DataContext = new MainWindowViewModel();
         ExtendClientAreaToDecorationsHint = true;
-        
-		// launcher version
-        
-        
-        // load on start
-        // var savedAccount = Managers.AccountManager.Load();
-        // if (savedAccount != null)
-        // {
-        //     UsernameBox.Text = savedAccount.Username;
-        // }
     }
     
     private void OnMinimizeButtonClicked(object sender, RoutedEventArgs e)

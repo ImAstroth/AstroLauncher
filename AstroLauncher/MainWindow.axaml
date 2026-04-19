@@ -4,7 +4,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="700"
         
-        xmlns:vm="using:AstroLauncher" 
+        xmlns:vm="using:AstroLauncher.ViewModels"
+        xmlns:views="clr-namespace:AstroLauncher.Views"
         x:DataType="vm:MainWindowViewModel"
         
         WindowStartupLocation="CenterScreen"
@@ -22,7 +23,7 @@
         Title="Astro Launcher">
         
         <Border BorderBrush="{DynamicResource AccentColor}"
-                BorderThickness="2" CornerRadius="10" ClipToBounds="True">
+                BorderThickness="3" CornerRadius="10" ClipToBounds="True">
                 
                 <Grid RowDefinitions="45, *">
                         <!-- TOPBAR -->        
@@ -71,7 +72,7 @@
                 
                                                 <StackPanel Grid.Row="0">
                                                         <!-- Home button -->
-                                                        <Button Classes="SidebarBtn">
+                                                        <Button Classes="SidebarBtn" Command="{Binding NavigateToHomeCommand}">
                                                                 <StackPanel Orientation="Horizontal" Spacing="10">
                                                                         <Image Source="Assets/Images/earth-icon.png" Width="50" Height="50"/>
                                                                         <TextBlock Text="HOME" VerticalAlignment="Center" FontSize="35"/>
@@ -79,7 +80,7 @@
                                                         </Button>
                         
                                                         <!-- Instances button -->
-                                                        <Button Classes="SidebarBtn">
+                                                        <Button Classes="SidebarBtn" Command="{Binding NavigateToInstancesCommand}">
                                                                 <StackPanel Orientation="Horizontal" Spacing="10">
                                                                         <Image Source="Assets/Images/minecraft-cube-icon.png" Width="50" Height="50"/>
                                                                         <TextBlock Text="INSTANCES" VerticalAlignment="Center" FontSize="25"/>
@@ -87,7 +88,7 @@
                                                         </Button>
                                                         
                                                         <!-- Discover button -->
-                                                        <Button Classes="SidebarBtn">
+                                                        <Button Classes="SidebarBtn" Command="{Binding NavigateToDiscoverCommand}">
                                                                 <StackPanel Orientation="Horizontal" Spacing="10">
                                                                         <Image Source="Assets/Images/saturn-icon.png" Width="50" Height="50"/>
                                                                         <TextBlock Text="DISCOVER" VerticalAlignment="Center" FontSize="25"/>
@@ -111,7 +112,24 @@
 
                                 <!-- MAIN AREA -->
                                 <Border Grid.Column="1">
-                                        
+                                        <ContentControl Content="{Binding CurrentPage}">
+                                                <ContentControl.DataTemplates>
+                                                        <!-- Instances -->
+                                                        <DataTemplate DataType="{x:Type vm:InstancesViewModel}">
+                                                                <views:InstancesView/>
+                                                        </DataTemplate>
+                                                        
+                                                        <!-- Home -->
+                                                        <DataTemplate DataType="{x:Type vm:HomeViewModel}">
+                                                                <views:HomeView/>
+                                                        </DataTemplate>
+                                                        
+                                                        <!-- Discover -->
+                                                        <DataTemplate DataType="{x:Type vm:DiscoverViewModel}">
+                                                                <views:DiscoverView/>
+                                                        </DataTemplate>
+                                                </ContentControl.DataTemplates>
+                                        </ContentControl>
                                 </Border>
                         </Grid>
                 </Grid>

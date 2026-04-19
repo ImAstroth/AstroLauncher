@@ -142,4 +142,11 @@
       <Content Include="obj\rider.project.model.nuget.info" />
       <Content Include="obj\rider.project.restore.info" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Views\HomeView.axaml.cs">
+        <DependentUpon>HomeView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
 </Project>
