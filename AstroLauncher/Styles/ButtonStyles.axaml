@@ -36,24 +36,25 @@
         <Setter Property="Background" Value="Transparent"/>
     </Style>
     
-    <Style Selector="Button.BottomBtn">
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{DynamicResource AccentColor}"/>
-        <Setter Property="Width" Value="50"/>
-        <Setter Property="Height" Value="50"/>
-        <Setter Property="CornerRadius" Value="8"/>
-    </Style>
-    
     <Style Selector="Button.SidebarBtn">
-        <Setter Property="Width" Value="220"/>
-        <Setter Property="Height" Value="75"/>
+        <Setter Property="Width" Value="110"/>
+        <Setter Property="Height" Value="100"/>
+        <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Margin" Value="0,20,0,0"/>
-        <Setter Property="CornerRadius" Value="0,10,10,0"/>
-        <Setter Property="Background" Value="{DynamicResource SurfaceSecondary}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource AccentColor}"/>
-        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="CornerRadius" Value="10"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        
+        <Setter Property="Transitions">
+            <Transitions>
+                <BrushTransition Property="Background" Duration="0:0:0.2"/>
+            </Transitions>
+        </Setter>
+    </Style>
+    
+    <Style Selector="Button.SidebarBtn.active">
+        <Setter Property="Background" Value="{DynamicResource AccentColor}"/>
     </Style>
   
     <Style Selector="Button.SidebarBtn Image">
@@ -63,7 +64,8 @@
 
     <Style Selector="Button.SidebarBtn TextBlock">
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="FontSize" Value="25"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="15"/>
     </Style>
     
 </Styles>
