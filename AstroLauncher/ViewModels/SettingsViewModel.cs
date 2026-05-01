@@ -10,5 +10,4 @@ public partial class SettingsViewModel : ObservableObject
 
     // RAM values
     [ObservableProperty] private double _maxRamValue = 16384;
-    [ObservableProperty] private double _currentRamValue = 0;
 }

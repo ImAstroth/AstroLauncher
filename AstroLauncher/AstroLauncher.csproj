@@ -58,6 +58,8 @@
 
     <ItemGroup>
       <Folder Include="Assets\Images\" />
+      <Folder Include="ViewModels\SettingsPageViewModels\" />
+      <Folder Include="Views\SettingsPageViews\" />
       <Folder Include="\Assets\Images" />
       <Folder Include="\Assets\Fonts\*"/>
     </ItemGroup>

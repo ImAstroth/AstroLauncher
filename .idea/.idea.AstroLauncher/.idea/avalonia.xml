@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="AstroLauncher/MainWindow.axaml" value="AstroLauncher/AstroLauncher.csproj" />
+        <entry key="AstroLauncher/SettingsWindow.axaml" value="AstroLauncher/AstroLauncher.csproj" />
+        <entry key="AstroLauncher/Styles/ButtonStyles.axaml" value="AstroLauncher/AstroLauncher.csproj" />
+        <entry key="AstroLauncher/Styles/Colors.axaml" value="AstroLauncher/AstroLauncher.csproj" />
+        <entry key="AstroLauncher/Views/DiscoverView.axaml" value="AstroLauncher/AstroLauncher.csproj" />
+        <entry key="AstroLauncher/Views/HomeView.axaml" value="AstroLauncher/AstroLauncher.csproj" />
+        <entry key="AstroLauncher/Views/InstancesView.axaml" value="AstroLauncher/AstroLauncher.csproj" />
+        <entry key="AstroLauncher/Views/SettingsView.axaml" value="AstroLauncher/AstroLauncher.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

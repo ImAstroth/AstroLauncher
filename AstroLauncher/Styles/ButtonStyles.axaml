@@ -36,36 +36,47 @@
         <Setter Property="Background" Value="Transparent"/>
     </Style>
     
-    <Style Selector="Button.SidebarBtn">
-        <Setter Property="Width" Value="110"/>
-        <Setter Property="Height" Value="100"/>
+    <Style Selector="Button.BaseNavBtn">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Margin" Value="0,20,0,0"/>
         <Setter Property="CornerRadius" Value="10"/>
-        <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
-        
         <Setter Property="Transitions">
             <Transitions>
                 <BrushTransition Property="Background" Duration="0:0:0.2"/>
             </Transitions>
         </Setter>
     </Style>
-    
-    <Style Selector="Button.SidebarBtn.active">
-        <Setter Property="Background" Value="{DynamicResource AccentColor}"/>
+
+    <!-- MAIN SIDEBAR -->
+    <Style Selector="Button.SidebarBtn">
+        <Setter Property="Width" Value="110"/>
+        <Setter Property="Height" Value="100"/>
+
+        <Style Selector="^.active">
+            <Setter Property="Background" Value="{DynamicResource AccentColor}"/>
+        </Style>
     </Style>
-  
+    
     <Style Selector="Button.SidebarBtn Image">
         <Setter Property="Width" Value="50"/>
         <Setter Property="Height" Value="50"/>
     </Style>
-
+    
     <Style Selector="Button.SidebarBtn TextBlock">
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="FontSize" Value="15"/>
+    </Style> 
+
+    <!-- SETTINGS SIDEBAR -->
+    <Style Selector="Button.SettingsSidebarBtn">
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="Height" Value="50"/>
+        <Style Selector="^.active">
+            <Setter Property="Background" Value="{DynamicResource AccentColor}"/>
+        </Style>
     </Style>
+    
     
 </Styles>

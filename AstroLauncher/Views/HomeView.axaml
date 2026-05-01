@@ -6,7 +6,7 @@
              x:Class="AstroLauncher.Views.HomeView">
 
     <Grid>
-        <TextBlock Text="Home Page Loaded" FontSize="30" Foreground="White"/>
+        <TextBlock Text="Home Page Loaded" FontSize="20" Foreground="White"/>
     </Grid>
 
 </UserControl>

@@ -6,11 +6,44 @@
              x:CompileBindings="True"
              x:Class="AstroLauncher.Views.SettingsView">
     
-    <StackPanel Margin="12" Spacing="10">
-        <TextBlock Text="Settings" FontSize="30" FontWeight="Bold" Foreground="{DynamicResource TextPrimary}" 
-                   HorizontalAlignment="Left"/>
+   <Border>
+       <StackPanel Margin="15" Spacing="3">
+           <TextBlock Text="Settings" FontSize="20" FontWeight="Bold" Foreground="{DynamicResource TextPrimary}" 
+                      HorizontalAlignment="Left"/>
         
-        <TextBlock Text="Customize your launcher experience" FontSize="20" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimary}" 
-                   HorizontalAlignment="Left"/>
-    </StackPanel>
+           <TextBlock Text="Customize your launcher experience" FontSize="15" Foreground="{DynamicResource TextSecondary}" 
+                      HorizontalAlignment="Left"/>
+           
+           <Grid ColumnDefinitions="175, *" Margin="0,15,0,0">
+               <!-- SETTINGS TAB -->
+               <Border Grid.Column="0" BorderBrush="{DynamicResource SurfaceCard}"
+                       BorderThickness="0, 0, 2, 0" CornerRadius="0,20,20,0">
+                   
+                   <StackPanel Orientation="Vertical" Spacing="5">
+                       <!-- General -->
+                       <Button Classes="SettingsSidebarBtn BaseNavBtn">
+                           <StackPanel Orientation="Horizontal" Spacing="10">
+                               <Image Source="/Assets/Images/earth-icon.png"/>
+                               <TextBlock Text="General" VerticalAlignment="Center"/>
+                           </StackPanel>
+                       </Button>
+                       
+                       <!-- Launcher -->
+                       <Button Classes="SettingsSidebarBtn BaseNavBtn">
+                           <StackPanel Orientation="Horizontal" Spacing="10">
+                               <Image Source="/Assets/Images/earth-icon.png"/>
+                               <TextBlock Text="Launcher" VerticalAlignment="Center"/>
+                           </StackPanel>
+                       </Button>
+                   </StackPanel>
+               </Border>
+               
+               <!-- SETTINGS MAIN AREA -->
+               <Border Grid.Column="1">
+                   
+               </Border>
+           </Grid>
+       </StackPanel>
+   </Border>
+    
 </UserControl>
