@@ -17,13 +17,17 @@
            <Grid ColumnDefinitions="175, *" Margin="0,15,0,0">
                <!-- SETTINGS TAB -->
                <Border Grid.Column="0" BorderBrush="{DynamicResource SurfaceCard}"
-                       BorderThickness="0, 0, 2, 0" CornerRadius="0,20,20,0">
+                       BorderThickness="2" CornerRadius="10" Background="{DynamicResource SurfaceSecondary}">
                    
-                   <StackPanel Orientation="Vertical" Spacing="5">
+                   <StackPanel Orientation="Vertical" Spacing="5" Margin="5" HorizontalAlignment="Center"
+                               VerticalAlignment="Top">
+                       
                        <!-- General -->
-                       <Button Classes="SettingsSidebarBtn BaseNavBtn">
+                       <Button Classes="SettingsSidebarBtn BaseNavBtn"
+                               Classes.active="">
+                           
                            <StackPanel Orientation="Horizontal" Spacing="10">
-                               <Image Source="/Assets/Images/earth-icon.png"/>
+                               <Image Source="/Assets/Images/house-icon.png"/>
                                <TextBlock Text="General" VerticalAlignment="Center"/>
                            </StackPanel>
                        </Button>
@@ -31,7 +35,7 @@
                        <!-- Launcher -->
                        <Button Classes="SettingsSidebarBtn BaseNavBtn">
                            <StackPanel Orientation="Horizontal" Spacing="10">
-                               <Image Source="/Assets/Images/earth-icon.png"/>
+                               <Image Source="/Assets/Images/monitor-icon.png"/>
                                <TextBlock Text="Launcher" VerticalAlignment="Center"/>
                            </StackPanel>
                        </Button>

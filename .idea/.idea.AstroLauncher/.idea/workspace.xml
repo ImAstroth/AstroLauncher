@@ -15,12 +15,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2518758b-660a-4585-82c2-63a87ce1f6b7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/AstroLauncher/AstroLauncher.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/AstroLauncher.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AstroLauncher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AstroLauncher/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AstroLauncher/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/MainWindow.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AstroLauncher/Styles/ButtonStyles.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/Styles/ButtonStyles.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AstroLauncher/Styles/Colors.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/Styles/Colors.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroLauncher/ViewModels/SettingsViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/ViewModels/SettingsViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroLauncher/Views/HomeView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/Views/HomeView.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AstroLauncher/Views/SettingsView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/Views/SettingsView.axaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +196,8 @@
       <workItem from="1776948087059" duration="135000" />
       <workItem from="1777101395994" duration="390000" />
       <workItem from="1777300000231" duration="2622000" />
-      <workItem from="1777639476421" duration="2447000" />
+      <workItem from="1777639476421" duration="3339000" />
+      <workItem from="1777708830383" duration="301000" />
     </task>
     <task id="LOCAL-00001" summary="Created Repository">
       <option name="closed" value="true" />
@@ -360,7 +359,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777302666047</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="forgot to push images from assets folder. Adding view models and views for settings too. Settings uopdate soon!">
+      <option name="closed" value="true" />
+      <created>1777642028146</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1777642028147</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +396,8 @@
     <MESSAGE value="feat: settings are now showed as page in main area as Home, Discover and Instances Views and ViewModels" />
     <MESSAGE value="feat: added new settings page, chnaged RAM alloctaion setting to Slider instead of NumericUpDown" />
     <MESSAGE value="feat: redesigned sidebar" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: redesigned sidebar" />
+    <MESSAGE value="forgot to push images from assets folder. Adding view models and views for settings too. Settings uopdate soon!" />
+    <option name="LAST_COMMIT_MESSAGE" value="forgot to push images from assets folder. Adding view models and views for settings too. Settings uopdate soon!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

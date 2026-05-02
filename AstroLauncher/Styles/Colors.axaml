@@ -9,7 +9,7 @@
             <SolidColorBrush x:Key="SurfaceCard">#252733</SolidColorBrush>
             <SolidColorBrush x:Key="TextPrimary">White</SolidColorBrush>
             <SolidColorBrush x:Key="TextSecondary">LightSlateGray</SolidColorBrush>
-            <SolidColorBrush x:Key="SurfaceSecondary">#252934</SolidColorBrush>
+            <SolidColorBrush x:Key="SurfaceSecondary">#0D111D</SolidColorBrush>
         </ResourceDictionary>
         
         <ResourceDictionary x:Key="Light">

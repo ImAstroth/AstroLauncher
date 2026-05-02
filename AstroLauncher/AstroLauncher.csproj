@@ -54,6 +54,18 @@
         <AvaloniaResource Include="Assets\Images\settings-icon.png" />
 
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+
+        <None Remove="Assets\Images\about-icon.png" />
+
+        <AvaloniaResource Include="Assets\Images\about-icon.png" />
+
+        <None Remove="Assets\Images\house-icon.png" />
+
+        <AvaloniaResource Include="Assets\Images\house-icon.png" />
+
+        <None Remove="Assets\Images\monitor-icon.png" />
+
+        <AvaloniaResource Include="Assets\Images\monitor-icon.png" />
     </ItemGroup>
 
     <ItemGroup>
