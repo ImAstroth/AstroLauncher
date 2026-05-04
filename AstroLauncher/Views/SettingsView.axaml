@@ -1,12 +1,21 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:AstroLauncher.ViewModels"
-             xmlns:viewModels="clr-namespace:AstroLauncher.ViewModels"
-             x:DataType="viewModels:SettingsViewModel"
+             xmlns:settingsPageViews="clr-namespace:AstroLauncher.Views.SettingsPageViews"
+             xmlns:settingsPageViewModels="clr-namespace:AstroLauncher.ViewModels.SettingsPageViewModels"
+             x:DataType="vm:SettingsViewModel"
              x:CompileBindings="True"
-             x:Class="AstroLauncher.Views.SettingsView">
+             x:Class="AstroLauncher.Views.SettingsView"
+             
+             xmlns:conv="using:AstroLauncher.Utils"
+             
+             >
     
-   <Border>
+    <UserControl.Resources>
+        <conv:ViewTypeToBoolConverter x:Key="ViewTypeConverter"/>
+    </UserControl.Resources>
+    
+    <Border>
        <StackPanel Margin="15" Spacing="3">
            <TextBlock Text="Settings" FontSize="20" FontWeight="Bold" Foreground="{DynamicResource TextPrimary}" 
                       HorizontalAlignment="Left"/>
@@ -24,7 +33,10 @@
                        
                        <!-- General -->
                        <Button Classes="SettingsSidebarBtn BaseNavBtn"
-                               Classes.active="">
+                               Command="{Binding NavigateToGeneralCommand}"
+                               Classes.active="{Binding CurrentSettingsPage, 
+                               Converter={StaticResource ViewTypeConverter},
+                               ConverterParameter=GeneralViewModel}">
                            
                            <StackPanel Orientation="Horizontal" Spacing="10">
                                <Image Source="/Assets/Images/house-icon.png"/>
@@ -33,7 +45,12 @@
                        </Button>
                        
                        <!-- Launcher -->
-                       <Button Classes="SettingsSidebarBtn BaseNavBtn">
+                       <Button Classes="SettingsSidebarBtn BaseNavBtn" 
+                               Command="{Binding NavigateToLauncherCommand}"
+                               Classes.active="{Binding CurrentSettingsPage, 
+                               Converter={StaticResource ViewTypeConverter},
+                               ConverterParameter=LauncherViewModel}">
+                           
                            <StackPanel Orientation="Horizontal" Spacing="10">
                                <Image Source="/Assets/Images/monitor-icon.png"/>
                                <TextBlock Text="Launcher" VerticalAlignment="Center"/>
@@ -44,7 +61,19 @@
                
                <!-- SETTINGS MAIN AREA -->
                <Border Grid.Column="1">
-                   
+                   <ContentControl Content="{Binding CurrentSettingsPage}">
+                       <ContentControl.DataTemplates>
+                           <!-- General -->
+                           <DataTemplate DataType="{x:Type settingsPageViewModels:GeneralViewModel}">
+                               <settingsPageViews:GeneralView/>
+                           </DataTemplate>
+                                                        
+                           <!-- Launcher -->
+                           <DataTemplate DataType="{x:Type settingsPageViewModels:LauncherViewModel}">
+                               <settingsPageViews:LauncherView/>
+                           </DataTemplate>
+                       </ContentControl.DataTemplates>
+                   </ContentControl>
                </Border>
            </Grid>
        </StackPanel>
