@@ -32,9 +32,15 @@ public partial class MainWindow : Window
         Close();
     }
 
-    private void OnResizeGripPressed(object sender, PointerPressedEventArgs e)
+    public void OnResizePressed(object? sender, PointerPressedEventArgs e)
     {
-        BeginResizeDrag(WindowEdge.NorthWest, e);
+        if (sender is Border { Tag: not null } border)
+        {
+            if (Enum.TryParse<WindowEdge>(border.Tag.ToString(), out var edge))
+            {
+                BeginResizeDrag(edge, e);
+            }
+        }
     }
     
     // public async void OnLaunchButtonClicked(object sender, RoutedEventArgs e)

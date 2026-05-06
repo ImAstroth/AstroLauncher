@@ -8,12 +8,10 @@
         xmlns:conv="using:AstroLauncher.Utils"
         xmlns:views="clr-namespace:AstroLauncher.Views"
         x:DataType="vm:MainWindowViewModel"
-
         
         WindowStartupLocation="CenterScreen"
-        ExtendClientAreaTitleBarHeightHint="-1"
+        ExtendClientAreaTitleBarHeightHint="45"
         ExtendClientAreaToDecorationsHint="True"
-        WindowDecorations="None"
         
         Background="{DynamicResource SurfaceMain}"
         Width="1000" Height="700"
@@ -28,8 +26,7 @@
         </Window.Resources>
         
         <Border BorderBrush="{DynamicResource AccentColor}"
-                BorderThickness="3" CornerRadius="10" ClipToBounds="True"
-                PointerPressed="OnResizeGripPressed">
+                BorderThickness="3" CornerRadius="10" ClipToBounds="True">
                 
                 <Grid RowDefinitions="45, *">
                         <!-- TOPBAR -->        
@@ -40,32 +37,11 @@
                                       Background="Transparent" 
                                       PointerPressed="SetupDrag">
 
-                                        <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto"/>
-                                                <ColumnDefinition Width="*"/>    
-                                                <ColumnDefinition Width="Auto"/> 
-                                        </Grid.ColumnDefinitions>
-
                                         <TextBlock Grid.Column="0" 
                                                    Text="ASTRO LAUNCHER" 
-                                                   VerticalAlignment="Center"
-                                                   Margin="15,0,0,0" 
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
                                                    Foreground="{DynamicResource TextPrimary}"
                                                    FontWeight="Bold"/>
-
-                                        <StackPanel Grid.Column="2" 
-                                                    Orientation="Horizontal" 
-                                                    VerticalAlignment="Center" 
-                                                    Margin="0,0,10,0">
-
-                                                <Button Content="-" 
-                                                        Classes="MinimizeBtn ControlBtn" 
-                                                        Click="OnMinimizeButtonClicked"/>
-
-                                                <Button Content="✕" 
-                                                        Classes="CloseBtn ControlBtn" 
-                                                        Click="OnCloseButtonClicked"/>
-                                        </StackPanel>
                                 </Grid>
                         </Border>
                         
