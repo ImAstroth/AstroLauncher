@@ -55,8 +55,17 @@
                                                 <Grid.Resources>
                                                         <DataTemplate x:Key="NavTemplate" x:DataType="vm:ViewModelBase">
                                                                 <StackPanel Orientation="Horizontal" Spacing="12">
-                                                                        <PathIcon Data="{Binding IconData}" Width="18" Height="18"
-                                                                                        Foreground="{DynamicResource TextPrimary}"/>
+                                                                        <Path Data="{Binding IconData}"
+                                                                              Fill="Transparent"
+                                                                              Stroke="{DynamicResource TextPrimary}" 
+                                                                              StrokeThickness="1.8"
+                                                                              StrokeJoin="Round"
+                                                                              StrokeLineCap="Round"
+                                                                              Stretch="Uniform"
+                                                                              Width="18" Height="18"
+                                                                              HorizontalAlignment="Center"
+                                                                              VerticalAlignment="Center"/>
+                                                                        
                                                                         <TextBlock Text="{Binding DisplayName}" VerticalAlignment="Center"/>
                                                                 </StackPanel>
                                                         </DataTemplate>

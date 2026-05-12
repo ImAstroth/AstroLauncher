@@ -15,23 +15,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2518758b-660a-4585-82c2-63a87ce1f6b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AstroLauncher/Assets/Icons.axaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AstroLauncher/Styles/ListBoxStyles.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AstroLauncher/.idea/avalonia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AstroLauncher/.idea/avalonia.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AstroLauncher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AstroLauncher/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroLauncher/App.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/App.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroLauncher/AstroLauncher.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/AstroLauncher.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstroLauncher/Assets/Icons.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/Assets/Icons.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AstroLauncher/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/MainWindow.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroLauncher/Styles/ButtonStyles.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/Styles/ButtonStyles.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroLauncher/Styles/SettingsStyles.axaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/AstroLauncher/ViewModels/DiscoverViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/ViewModels/DiscoverViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AstroLauncher/ViewModels/HomeViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/ViewModels/HomeViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AstroLauncher/ViewModels/InstancesViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/ViewModels/InstancesViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroLauncher/ViewModels/MainWindowViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/ViewModels/MainWindowViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AstroLauncher/ViewModels/SettingsPageViewModels/GeneralViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/ViewModels/SettingsPageViewModels/GeneralViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AstroLauncher/ViewModels/SettingsPageViewModels/LauncherViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/ViewModels/SettingsPageViewModels/LauncherViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AstroLauncher/ViewModels/SettingsViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/ViewModels/SettingsViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstroLauncher/Views/SettingsView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AstroLauncher/Views/SettingsView.axaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +222,8 @@
       <workItem from="1778401925413" duration="4342000" />
       <workItem from="1778517933138" duration="3125000" />
       <workItem from="1778521235294" duration="216000" />
-      <workItem from="1778521551522" duration="1197000" />
+      <workItem from="1778521551522" duration="1292000" />
+      <workItem from="1778586084619" duration="1331000" />
     </task>
     <task id="LOCAL-00001" summary="Created Repository">
       <option name="closed" value="true" />
@@ -440,7 +433,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778163573116</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fix: added Icons.axaml">
+      <option name="closed" value="true" />
+      <created>1778522793648</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1778522793648</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +451,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Created Repository" />
     <MESSAGE value="Added button" />
     <MESSAGE value="Added navigations pannel" />
     <MESSAGE value="Added Assets folder and backgound image" />
@@ -475,7 +475,8 @@
     <MESSAGE value="started working on InstancesView.axaml for better minecraft installations controll" />
     <MESSAGE value="feat: added resizing" />
     <MESSAGE value="fix: now using ListBox and DataTemplates rather than Buttons in Sidebars" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: now using ListBox and DataTemplates rather than Buttons in Sidebars" />
+    <MESSAGE value="fix: added Icons.axaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: added Icons.axaml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
